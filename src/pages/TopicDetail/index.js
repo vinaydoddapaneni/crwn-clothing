@@ -5,6 +5,7 @@ class TopicDetail extends Component {
         return (
             <div>
                 TopicDetail
+                {this.props.match.params.topicId}
             </div>
         )
     }

@@ -8,7 +8,7 @@ const Root = [
     { path: "/", exact: true, component: Home, name: 'Home' },
     { path: "/topics", exact: true, component: TopicsList, name: 'Topics List' },
     { path: "/topics/:topicId", exact: true, component: TopicDetail, name: 'Topics Detail' },
-    { path: "/", component: Error404, name: 'Error' },
+    { path: "/", exact: true, component: Error404, name: 'Error' },
 ]
 
 export default Root
