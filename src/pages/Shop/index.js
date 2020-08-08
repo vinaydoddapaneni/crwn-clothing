@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import collections from './collections'
-import Viewcollection from '../../components/viewcollection'
+import { VC, IC } from '../../components/collection'
 
 class Shop extends Component {
     constructor() {
@@ -16,12 +16,12 @@ class Shop extends Component {
             <div className="shop-page">
                 {
                     collection.map(({ id, ...otherCollectionProps }) => (
-                        <Viewcollection key={id}
+                        <VC key={id}
                             {...otherCollectionProps}
                         />
                     ))
                 }
-
+                <IC />
             </div>
         )
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../../assets/index.scss'
 import Menu from '../../components/menu'
 
 class Home extends Component {

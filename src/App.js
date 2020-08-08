@@ -21,7 +21,7 @@ function App() {
   return (
     <ScrollToTop>
       <Switch>
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense fallback={<div className="loader"></div>}>
           {menu}
           {/* <Redirect from="/" to="/" /> */}
           {/* <Route render={() => <Redirect to={{ pathname: "/" }} />} /> */}
