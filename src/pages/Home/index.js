@@ -4,6 +4,7 @@ import Menu from '../../components/menu'
 
 class Home extends Component {
     render() {
+        console.log(this.props)
         return (
             <div className="homepage">
                 {/* Menu items */}
