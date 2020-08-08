@@ -13,22 +13,25 @@ const menu = Root.map((list, key) => (
     exact={list.exact}
     path={list.path}
     component={list.component}
-    render={props => (
-      <list.component {...props} />
-    )}
+  // render={props => (
+  //   <list.component {...props} />
+  // )}
   />
 ))
-function App() {
-  return (
-    <ScrollToTop>
-      <Header />
-      <Switch>
-        <Suspense fallback={<div className="loader"></div>}>
-          {menu}
-        </Suspense>
-      </Switch>
-    </ScrollToTop>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <ScrollToTop>
+        <Header />
+        <Switch>
+          <Suspense fallback={<div className="loader"></div>}>
+            {menu}
+            {/* <Redirect from={} to="/error" /> */}
+          </Suspense>
+        </Switch>
+      </ScrollToTop>
+    )
+  }
 }
 
 export default App;
