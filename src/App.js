@@ -5,6 +5,7 @@ import {
   Switch, Route
 } from 'react-router-dom'
 import Root from './routes';
+import Header from './components/Header';
 
 const menu = Root.map((list, key) => (
   <Route
@@ -20,11 +21,10 @@ const menu = Root.map((list, key) => (
 function App() {
   return (
     <ScrollToTop>
+      <Header />
       <Switch>
         <Suspense fallback={<div className="loader"></div>}>
           {menu}
-          {/* <Redirect from="/" to="/" /> */}
-          {/* <Route render={() => <Redirect to={{ pathname: "/" }} />} /> */}
         </Suspense>
       </Switch>
     </ScrollToTop>
